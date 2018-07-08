@@ -1,7 +1,8 @@
 class Stopwatch {
-  constructor(display){
+  constructor(display, results){
     this.running = false;
     this.display = display;
+    this.results = results
     this.reset();
     this.print(this.times);
     this.resArr = []
@@ -83,7 +84,7 @@ function pad0(value){
 }
 
 
-const stopwatch = new Stopwatch(document.querySelector('.stopwatch'));
+const stopwatch = new Stopwatch(document.querySelector('.stopwatch'), document.querySelector('.results'));
 
 //start
 let startButton = document.getElementById('start');
@@ -120,4 +121,4 @@ cleanLapsButton.addEventListener('click', () => {
   stopwatch.cleanLaps();
 });
 
-let results = document.querySelector('.results')
+
