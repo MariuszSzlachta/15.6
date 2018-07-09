@@ -2,7 +2,7 @@ class Stopwatch {
   constructor(display, results){
     this.running = false;
     this.display = display;
-    this.results = results
+    this.results = results;
     this.reset();
     this.print(this.times);
     this.resArr = []
@@ -52,7 +52,6 @@ class Stopwatch {
   stop(){
     this.running = false;
     clearInterval(this.watch);
-    console.log(this.resArr)
   }
 
   // my features:
